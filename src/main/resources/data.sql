@@ -1,14 +1,28 @@
-INSERT INTO Users (User_id, username, password)  VALUES 
-(1, 'Aaron', '1234');
+-- Insert data into Users table
+INSERT INTO Users (username, password) VALUES
+('user', '$2a$10$NVM0n8ElaRgg7zWO1CxUdei7vWoPg91Lz2aYavh9.f9q0e4bRadue'), -- Password: user
+('admin', '$2a$10$8cjz47bjbR4Mn8GMg9IZx.vyjhLXR/SKKMSZ9.mP9vpMu0ssKi8GW'); -- Password: admin
 
-INSERT INTO Price (price_id, price)  VALUES 
-(1, '$12.50');
+-- Insert data into Price table
+INSERT INTO Price (price) VALUES
+('10.00'),
+('15.00'),
+('20.00');
 
-INSERT INTO Movies (movie_id, movie_title, movie_rating, movie_length, price_id)  VALUES 
-(1, 'Iron Man', '4/5', 135, 1);
+-- Insert data into Movies table
+INSERT INTO Movies (movie_title, movie_rating, movie_length, price_id) VALUES
+('Movie A', 'PG-13', 120, 1),
+('Movie B', 'R', 150, 2),
+('Movie C', 'PG', 105, 3);
 
-INSERT INTO Rooms (room_id, capacity)  VALUES 
-(101, 50);
+-- Insert data into Rooms table
+INSERT INTO Rooms (capacity) VALUES
+(50),
+(75),
+(100);
 
-INSERT INTO Schedule (schedule_id, start_time, end_time, date, movie_id, room_id)  VALUES 
-(1, '2:00pm', '4:00pm', '2021-09-01', 1, 101);
+-- Insert data into Schedule table
+INSERT INTO Schedule (start_time, end_time, date, movie_id, room_id) VALUES
+('12:00 PM', '2:00 PM', '2023-11-15', 1, 1),
+('3:00 PM', '5:30 PM', '2023-11-15', 2, 2),
+('7:00 PM', '9:00 PM', '2023-11-15', 3, 3);
