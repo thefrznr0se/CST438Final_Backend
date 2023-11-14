@@ -1,7 +1,7 @@
 package com.cst438.domain;
+import org.springframework.data.repository.CrudRepository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ScheduleRepository extends JpaRepository<Schedule, Integer> {
+public interface ScheduleRepository extends CrudRepository<Schedule, Integer> {
     // Additional query methods, if needed
 }

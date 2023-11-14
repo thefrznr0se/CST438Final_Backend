@@ -11,7 +11,7 @@ CREATE TABLE Price (
     PRIMARY KEY (price_id)
 );
 
-CREATE TABLE Movies (
+CREATE TABLE Movie (
     movie_id INT NOT NULL AUTO_INCREMENT,
     movie_title VARCHAR(250),
     movie_rating VARCHAR(20),
@@ -21,7 +21,7 @@ CREATE TABLE Movies (
     FOREIGN KEY (price_id) REFERENCES Price (price_id) -- Removed ON DELETE CASCADE
 );
 
-CREATE TABLE Rooms (
+CREATE TABLE Room (
     room_id INT NOT NULL AUTO_INCREMENT,
     capacity INT,
     PRIMARY KEY (room_id)
@@ -35,6 +35,7 @@ CREATE TABLE Schedule (
     movie_id INT,
     room_id INT,
     PRIMARY KEY (schedule_id),
-    FOREIGN KEY (movie_id) REFERENCES Movies (movie_id), -- Removed ON DELETE CASCADE
-    FOREIGN KEY (room_id) REFERENCES Rooms (room_id) -- Removed ON DELETE CASCADE
+    FOREIGN KEY (movie_id) REFERENCES Movie (movie_id),
+    FOREIGN KEY (room_id) REFERENCES Room (room_id)
 );
+
