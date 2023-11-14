@@ -37,8 +37,8 @@ public class MovieScheduleController {
                     schedule.getStart_time(),
                     schedule.getEnd_time(),
                     schedule.getDate(),
-                    schedule.getMovie().getMovie_id(),
-                    schedule.getRoom().getRoom_id()
+                    schedule.getMovie().getMovie_title(),
+                    schedule.getRoom().getCapacity()
             );
             result[i] = dto;
         }
