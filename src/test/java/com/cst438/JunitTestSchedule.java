@@ -1,6 +1,5 @@
 package com.cst438;
 
-import com.cst438.domain.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -14,10 +13,6 @@ import com.cst438.dto.ScheduleDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-
-import java.sql.Date;
 
 @SpringBootTest
 @AutoConfigureMockMvc
