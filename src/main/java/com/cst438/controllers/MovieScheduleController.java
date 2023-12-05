@@ -58,7 +58,7 @@ public class MovieScheduleController {
 
 		Schedule schedules = scheduleRepository.findById(id).orElse(null);
 		if (schedules == null) {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "schedule not found." + id );
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "schedule not found or not authorized." + id );
 		}
 
 		ScheduleDTO dto = new ScheduleDTO(
