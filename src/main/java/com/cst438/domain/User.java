@@ -1,38 +1,26 @@
 package com.cst438.domain;
 
+
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "Users")
+@Table(name="Users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userId;
+    private int user_id;  // Match the column name in the table
 
     private String username;
     private String password;
+    private String Role;
 
-    @Enumerated(EnumType.STRING)
-    private Role role;
-
-    @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt;
-
-    private LocalDateTime updatedAt;
-
-    // Default constructor
-    public User() {
+    public int getUser_id() {
+        return user_id;
     }
 
-    // Getters and setters
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public String getUsername() {
@@ -51,36 +39,18 @@ public class User {
         this.password = password;
     }
 
-    public Role getRole() {
-        return role;
+    public String getRole() {
+        return Role;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setRole(String getRole) {
+        this.Role = Role;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
+    // No need for additional attributes (firstName, lastName, role) in this class
 
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    // Callback methods
-    @PrePersist
-    protected void onCreate() {
-        createdAt = LocalDateTime.now();
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        updatedAt = LocalDateTime.now();
-    }
-
-
-    public enum Role {
-        USER,
-        ADMIN
+    @Override
+    public String toString() {
+        return "User [user_id=" + user_id + ", username=" + username + "]";
     }
 }
