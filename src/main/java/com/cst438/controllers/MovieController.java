@@ -59,7 +59,7 @@ public class MovieController {
 
 		Movie movie = movieRepository.findById(id).orElse(null);
 		if (movie == null) {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Movie not found." + id );
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Movie not found or not authorized." + id );
 		}
 
 		MovieDTO dto = new MovieDTO(

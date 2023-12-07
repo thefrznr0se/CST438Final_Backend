@@ -1,7 +1,7 @@
 -- Insert data into Users table
 INSERT INTO Users (username, password, role) VALUES
 ('user', '$2a$10$NVM0n8ElaRgg7zWO1CxUdei7vWoPg91Lz2aYavh9.f9q0e4bRadue', 'USER'), -- Password: user
-('admin', '$2a$10$NVM0n8ElaRgg7zWO1CxUdei7vWoPg91Lz2aYavh9.f9q0e4bRadue', 'ADMIN'); -- Password: user
+('admin', '$2a$10$8cjz47bjbR4Mn8GMg9IZx.vyjhLXR/SKKMSZ9.mP9vpMu0ssKi8GW', 'ADMIN'); -- Password: admin
 
 -- Insert data into Price table
 INSERT INTO Price (price) VALUES
