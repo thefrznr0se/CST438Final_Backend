@@ -127,7 +127,7 @@ public class EndToEndTestMovie {
             Thread.sleep(SLEEP_DURATION);
 
             WebElement message = driver.findElement(By.id("gmessage"));
-            WebElement Dbutton = driver.findElement(By.id("Delete"));
+            WebElement Dbutton = driver.findElement(By.id("submit"));
 
             Dbutton.click();
             Thread.sleep(SLEEP_DURATION);
